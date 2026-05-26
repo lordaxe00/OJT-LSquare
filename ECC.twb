@@ -1,0 +1,1543 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1211.0901                               -->
+<workbook original-version='18.1' source-build='2024.3.2 (20243.24.1211.0901)' source-platform='win' version='18.1' xml:base='https://tableau.lemonsquare.com.ph' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SingleValuePerNestSorting />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='SHIPMENTECC2025' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='TBL_SHIPMENT_2025_ECC_DATA+ (SALES)' inline='true' name='federated.0tf3h3o10boamb1c88h5c04anfwn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='192.168.0.251' name='sqlserver.11hg5w708006rz1e3if600x25w0r'>
+            <connection authentication='sqlserver' class='sqlserver' dbname='SALES' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='192.168.0.251' server-oauth='' server-userid='13' username='sa' workgroup-auth-mode='prompt' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='sqlserver.11hg5w708006rz1e3if600x25w0r' name='TBL_SHIPMENT_2025_ECC_DATA' table='[dbo].[TBL_SHIPMENT_2025_ECC_DATA]' type='table' />
+          <relation connection='sqlserver.11hg5w708006rz1e3if600x25w0r' name='TBL_Shipment_Material' table='[dbo].[TBL_Shipment_Material]' type='table' />
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>SHIPMENT_NUMBER</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SHIPMENT_NUMBER]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>SHIPMENT_NUMBER</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DELIVERY</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[DELIVERY]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>DELIVERY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILLING_DOCUMENT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BILLING_DOCUMENT]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>BILLING_DOCUMENT</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>15</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHIPMENT_TYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SHIPMENT_TYPE]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>SHIPMENT_TYPE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHIPPING_TYPE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SHIPPING_TYPE]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>SHIPPING_TYPE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTAINER_ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CONTAINER_ID]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>CONTAINER_ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>30</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SERVICE_AGENT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SERVICE_AGENT]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>SERVICE_AGENT</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SERVICE_AGENT_DESCRIPTION</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SERVICE_AGENT_DESCRIPTION]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>SERVICE_AGENT_DESCRIPTION</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIQUIDATION_REASON_CODE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LIQUIDATION_REASON_CODE]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>LIQUIDATION_REASON_CODE</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIQUIDATED</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LIQUIDATED]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>LIQUIDATED</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PURCHASING_DOCUMENT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PURCHASING_DOCUMENT]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>PURCHASING_DOCUMENT</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIQ_DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[LIQ_DATE]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>LIQ_DATE</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DELIVERY_DATE_FROM_TO</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DELIVERY_DATE_FROM_TO]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>DELIVERY_DATE_FROM_TO</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CREATED_ON</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[CREATED_ON]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>CREATED_ON</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CREATED_BY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CREATED_BY]</local-name>
+            <parent-name>[TBL_SHIPMENT_2025_ECC_DATA]</parent-name>
+            <remote-alias>CREATED_BY</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>15</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bill_doc</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bill_doc]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Bill_doc</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BillQty</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[BillQty]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>BillQty</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>18</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SU</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SU]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>SU</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BillQtySKU</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[BillQtySKU]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>BillQtySKU</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>18</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Net_Weight</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Net_Weight]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Net_Weight</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>18</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gross_Weight</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Gross_Weight]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Gross_Weight</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>18</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WUn</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[WUn]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>WUn</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>18</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Net_value</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Net_value]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Net_value</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>18</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ref_Doc</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ref_Doc]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Ref_Doc</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>30</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales_Doc</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sales_Doc]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Sales_Doc</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>30</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Material</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Material]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Material</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>70</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Batch</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Batch]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Batch</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>12</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Matl_Group</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Matl_Group]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Matl_Group</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PInt</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PInt]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>PInt</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SGrp</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SGrp]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>SGrp</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SOff</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SOff]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>SOff</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Created_By</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Created_By]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Created_By</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>15</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Created_On</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Created_On]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>Created_On</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SLoc</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SLoc]</local-name>
+            <parent-name>[TBL_Shipment_Material]</parent-name>
+            <remote-alias>SLoc</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Gross_Weight:qk]&quot;' value='Gross Weight' />
+          <alias key='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Net_value:qk]&quot;' value='Net Value' />
+          <alias key='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Net_Weight:qk]&quot;' value='Net Weight' />
+        </aliases>
+      </column>
+      <column caption='Billing Document' datatype='string' name='[BILLING_DOCUMENT]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Batch]' role='dimension' type='nominal' />
+      <column caption='Bill Qty SKU' datatype='real' name='[BillQtySKU]' role='measure' type='quantitative' />
+      <column aggregation='Count' caption='Bill Qty' datatype='integer' datatype-customized='true' name='[BillQty]' role='measure' type='quantitative' />
+      <column caption='Bill doc' datatype='string' name='[Bill_doc]' role='dimension' type='nominal' />
+      <column caption='Container Id' datatype='string' name='[CONTAINER_ID]' role='dimension' type='nominal' />
+      <column caption='Created By' datatype='string' name='[CREATED_BY]' role='dimension' type='nominal' />
+      <column caption='Created On' datatype='date' default-format='*mmmm dd, yyyy' name='[CREATED_ON]' role='dimension' type='ordinal' />
+      <column caption='Created By:' datatype='string' name='[Created_By]' role='dimension' type='nominal' />
+      <column caption='Created Date' datatype='date' default-format='*mmmm dd, yyyy' name='[Created_On]' role='dimension' type='ordinal' />
+      <column caption='Delivery' datatype='string' datatype-customized='true' default-role='measure' default-type='ordinal' name='[DELIVERY]' role='dimension' type='nominal' />
+      <column caption='Delivery Date From To' datatype='date' default-format='*mmmm dd, yyyy' name='[DELIVERY_DATE_FROM_TO]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+      <column aggregation='Count' caption='Gross Weight' datatype='real' datatype-customized='true' name='[Gross_Weight]' role='measure' type='quantitative' />
+      <column caption='Liquidated' datatype='string' name='[LIQUIDATED]' role='dimension' type='nominal' />
+      <column caption='Liquidation Reason Code' datatype='string' name='[LIQUIDATION_REASON_CODE]' role='dimension' type='nominal' />
+      <column caption='Liquidation Date' datatype='date' default-format='*mmmm dd, yyyy' name='[LIQ_DATE]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Material]' role='dimension' type='nominal' />
+      <column caption='Matl Group' datatype='string' name='[Matl_Group]' role='dimension' type='nominal' />
+      <column aggregation='Count' caption='Net Weight' datatype='real' datatype-customized='true' name='[Net_Weight]' role='measure' type='quantitative' />
+      <column aggregation='Count' caption='Net value' datatype='real' datatype-customized='true' name='[Net_value]' role='measure' type='quantitative' />
+      <column caption='P Int' datatype='string' name='[PInt]' role='dimension' type='nominal' />
+      <column caption='Purchasing Document' datatype='string' name='[PURCHASING_DOCUMENT]' role='dimension' type='nominal' />
+      <column caption='Ref Doc' datatype='string' name='[Ref_Doc]' role='dimension' type='nominal' />
+      <column caption='Service Agent' datatype='string' name='[SERVICE_AGENT]' role='dimension' type='nominal' />
+      <column caption='Service Agent Description' datatype='string' name='[SERVICE_AGENT_DESCRIPTION]' role='dimension' type='nominal' />
+      <column caption='S Grp' datatype='string' name='[SGrp]' role='dimension' type='nominal' />
+      <column caption='Shipment Number' datatype='string' datatype-customized='true' name='[SHIPMENT_NUMBER]' role='dimension' type='nominal' />
+      <column caption='Shipment Type' datatype='string' name='[SHIPMENT_TYPE]' role='dimension' type='nominal' />
+      <column caption='Shipping Type' datatype='string' name='[SHIPPING_TYPE]' role='dimension' type='nominal' />
+      <column caption='S Loc' datatype='string' name='[SLoc]' role='dimension' type='nominal' />
+      <column caption='S Off' datatype='string' name='[SOff]' role='dimension' type='nominal' />
+      <column datatype='string' name='[SU]' role='dimension' type='nominal' />
+      <column caption='Sales Doc' datatype='string' name='[Sales_Doc]' role='dimension' type='nominal' />
+      <column caption='W Un' datatype='string' name='[WUn]' role='dimension' type='nominal' />
+      <column caption='TBL_SHIPMENT_2025_ECC_DATA' datatype='table' name='[__tableau_internal_object_id__].[TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18]' role='measure' type='quantitative' />
+      <column caption='TBL_Shipment_Material' datatype='table' name='[__tableau_internal_object_id__].[TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02]' role='measure' type='quantitative' />
+      <column-instance column='[BILLING_DOCUMENT]' derivation='None' name='[none:BILLING_DOCUMENT:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Batch]' derivation='None' name='[none:Batch:nk]' pivot='key' type='nominal' />
+      <column-instance column='[CONTAINER_ID]' derivation='None' name='[none:CONTAINER_ID:nk]' pivot='key' type='nominal' />
+      <column-instance column='[CREATED_BY]' derivation='None' name='[none:CREATED_BY:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Created_By]' derivation='None' name='[none:Created_By:nk]' pivot='key' type='nominal' />
+      <column-instance column='[DELIVERY]' derivation='None' name='[none:DELIVERY:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+      <column-instance column='[LIQUIDATED]' derivation='None' name='[none:LIQUIDATED:nk]' pivot='key' type='nominal' />
+      <column-instance column='[LIQUIDATION_REASON_CODE]' derivation='None' name='[none:LIQUIDATION_REASON_CODE:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Material]' derivation='None' name='[none:Material:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Matl_Group]' derivation='None' name='[none:Matl_Group:nk]' pivot='key' type='nominal' />
+      <column-instance column='[PInt]' derivation='None' name='[none:PInt:nk]' pivot='key' type='nominal' />
+      <column-instance column='[PURCHASING_DOCUMENT]' derivation='None' name='[none:PURCHASING_DOCUMENT:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Ref_Doc]' derivation='None' name='[none:Ref_Doc:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SERVICE_AGENT]' derivation='None' name='[none:SERVICE_AGENT:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SERVICE_AGENT_DESCRIPTION]' derivation='None' name='[none:SERVICE_AGENT_DESCRIPTION:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SGrp]' derivation='None' name='[none:SGrp:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SHIPMENT_NUMBER]' derivation='None' name='[none:SHIPMENT_NUMBER:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SHIPMENT_TYPE]' derivation='None' name='[none:SHIPMENT_TYPE:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SHIPPING_TYPE]' derivation='None' name='[none:SHIPPING_TYPE:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SLoc]' derivation='None' name='[none:SLoc:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SOff]' derivation='None' name='[none:SOff:nk]' pivot='key' type='nominal' />
+      <column-instance column='[SU]' derivation='None' name='[none:SU:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Sales_Doc]' derivation='None' name='[none:Sales_Doc:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Gross_Weight]' derivation='Sum' name='[sum:Gross_Weight:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Net_Weight]' derivation='Sum' name='[sum:Net_Weight:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Net_value]' derivation='Sum' name='[sum:Net_value:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Created_On]' derivation='Day-Trunc' name='[tdy:Created_On:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Inclusions (Batch,Billing Document,Container Id,Created By,Created By1,DAY(Created Date),Delivery,Description,Liquidated,Liquidation Reason Code,Material,Matl Group,P Int,Purchasing Document,Ref Doc,S Grp,S Loc,S Off,Sales Doc,Service Agent,Service Agent Description,Shipment Number,Shipment Type,Shipping Type,SU)]' name-style='unqualified' user:auto-column='include'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Batch:nk]' />
+          <groupfilter function='level-members' level='[none:BILLING_DOCUMENT:nk]' />
+          <groupfilter function='level-members' level='[none:CONTAINER_ID:nk]' />
+          <groupfilter function='level-members' level='[none:CREATED_BY:nk]' />
+          <groupfilter function='level-members' level='[none:Created_By:nk]' />
+          <groupfilter function='level-members' level='[tdy:Created_On:ok]' />
+          <groupfilter function='level-members' level='[none:DELIVERY:nk]' />
+          <groupfilter function='level-members' level='[none:Description:nk]' />
+          <groupfilter function='level-members' level='[none:LIQUIDATED:nk]' />
+          <groupfilter function='level-members' level='[none:LIQUIDATION_REASON_CODE:nk]' />
+          <groupfilter function='level-members' level='[none:Material:nk]' />
+          <groupfilter function='level-members' level='[none:Matl_Group:nk]' />
+          <groupfilter function='level-members' level='[none:PInt:nk]' />
+          <groupfilter function='level-members' level='[none:PURCHASING_DOCUMENT:nk]' />
+          <groupfilter function='level-members' level='[none:Ref_Doc:nk]' />
+          <groupfilter function='level-members' level='[none:SGrp:nk]' />
+          <groupfilter function='level-members' level='[none:SLoc:nk]' />
+          <groupfilter function='level-members' level='[none:SOff:nk]' />
+          <groupfilter function='level-members' level='[none:Sales_Doc:nk]' />
+          <groupfilter function='level-members' level='[none:SERVICE_AGENT:nk]' />
+          <groupfilter function='level-members' level='[none:SERVICE_AGENT_DESCRIPTION:nk]' />
+          <groupfilter function='level-members' level='[none:SHIPMENT_NUMBER:nk]' />
+          <groupfilter function='level-members' level='[none:SHIPMENT_TYPE:nk]' />
+          <groupfilter function='level-members' level='[none:SHIPPING_TYPE:nk]' />
+          <groupfilter function='level-members' level='[none:SU:nk]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Philippines&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='TBL_SHIPMENT_2025_ECC_DATA' id='TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18'>
+            <properties context=''>
+              <relation connection='sqlserver.11hg5w708006rz1e3if600x25w0r' name='TBL_SHIPMENT_2025_ECC_DATA' table='[dbo].[TBL_SHIPMENT_2025_ECC_DATA]' type='table' />
+            </properties>
+          </object>
+          <object caption='TBL_Shipment_Material' id='TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02'>
+            <properties context=''>
+              <relation connection='sqlserver.11hg5w708006rz1e3if600x25w0r' name='TBL_Shipment_Material' table='[dbo].[TBL_Shipment_Material]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[BILLING_DOCUMENT]' />
+              <expression op='[Bill_doc]' />
+            </expression>
+            <first-end-point object-id='TBL_SHIPMENT_2025_ECC_DATA_09CDDFC1AE5C4404884374E760080E18' />
+            <second-end-point object-id='TBL_Shipment_Material_9BA6017B36DA4C348220A050B3F53F02' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0tf3h3o10boamb1c88h5c04anfwn'>
+      <datasources>
+        <datasource caption='TBL_SHIPMENT_2025_ECC_DATA+ (SALES)' name='federated.0tf3h3o10boamb1c88h5c04anfwn' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0tf3h3o10boamb1c88h5c04anfwn'>
+        <column caption='Bill doc' datatype='string' name='[Bill_doc]' role='dimension' type='nominal' />
+        <column caption='Created Date' datatype='date' default-format='*mmmm dd, yyyy' name='[Created_On]' role='dimension' type='ordinal' />
+        <column caption='Shipment Number' datatype='string' datatype-customized='true' name='[SHIPMENT_NUMBER]' role='dimension' type='nominal' />
+        <column-instance column='[Created_On]' derivation='Month' name='[mn:Created_On:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Bill_doc]' derivation='None' name='[none:Bill_doc:nk]' pivot='key' type='nominal' />
+        <column-instance column='[SHIPMENT_NUMBER]' derivation='None' name='[none:SHIPMENT_NUMBER:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]'>
+        <groupfilter function='member' level='[mn:Created_On:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        <preset type='last-values' />
+        <target field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]' />
+      </filter>
+      <filter class='categorical' column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Bill_doc:nk]'>
+        <groupfilter function='level-members' level='[none:Bill_doc:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Bill_doc:nk]' />
+      </filter>
+      <filter class='categorical' column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]'>
+        <groupfilter function='member' level='[none:SHIPMENT_NUMBER:nk]' member='&quot;30282280&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        <target field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TBL_SHIPMENT_2025_ECC_DATA+ (SALES)' name='federated.0tf3h3o10boamb1c88h5c04anfwn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tf3h3o10boamb1c88h5c04anfwn'>
+            <column caption='Billing Document' datatype='string' name='[BILLING_DOCUMENT]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Batch]' role='dimension' type='nominal' />
+            <column caption='Bill Qty SKU' datatype='real' name='[BillQtySKU]' role='measure' type='quantitative' />
+            <column aggregation='Count' caption='Bill Qty' datatype='integer' datatype-customized='true' name='[BillQty]' role='measure' type='quantitative' />
+            <column caption='Bill doc' datatype='string' name='[Bill_doc]' role='dimension' type='nominal' />
+            <column caption='Container Id' datatype='string' name='[CONTAINER_ID]' role='dimension' type='nominal' />
+            <column caption='Created By' datatype='string' name='[CREATED_BY]' role='dimension' type='nominal' />
+            <column caption='Created On' datatype='date' default-format='*mmmm dd, yyyy' name='[CREATED_ON]' role='dimension' type='ordinal' />
+            <column caption='Created By:' datatype='string' name='[Created_By]' role='dimension' type='nominal' />
+            <column caption='Created Date' datatype='date' default-format='*mmmm dd, yyyy' name='[Created_On]' role='dimension' type='ordinal' />
+            <column caption='Delivery' datatype='string' datatype-customized='true' default-role='measure' default-type='ordinal' name='[DELIVERY]' role='dimension' type='nominal' />
+            <column caption='Delivery Date From To' datatype='date' default-format='*mmmm dd, yyyy' name='[DELIVERY_DATE_FROM_TO]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column aggregation='Count' caption='Gross Weight' datatype='real' datatype-customized='true' name='[Gross_Weight]' role='measure' type='quantitative' />
+            <column caption='Liquidated' datatype='string' name='[LIQUIDATED]' role='dimension' type='nominal' />
+            <column caption='Liquidation Reason Code' datatype='string' name='[LIQUIDATION_REASON_CODE]' role='dimension' type='nominal' />
+            <column caption='Liquidation Date' datatype='date' default-format='*mmmm dd, yyyy' name='[LIQ_DATE]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Material]' role='dimension' type='nominal' />
+            <column caption='Matl Group' datatype='string' name='[Matl_Group]' role='dimension' type='nominal' />
+            <column aggregation='Count' caption='Net Weight' datatype='real' datatype-customized='true' name='[Net_Weight]' role='measure' type='quantitative' />
+            <column aggregation='Count' caption='Net value' datatype='real' datatype-customized='true' name='[Net_value]' role='measure' type='quantitative' />
+            <column caption='P Int' datatype='string' name='[PInt]' role='dimension' type='nominal' />
+            <column caption='Purchasing Document' datatype='string' name='[PURCHASING_DOCUMENT]' role='dimension' type='nominal' />
+            <column caption='Ref Doc' datatype='string' name='[Ref_Doc]' role='dimension' type='nominal' />
+            <column caption='Service Agent' datatype='string' name='[SERVICE_AGENT]' role='dimension' type='nominal' />
+            <column caption='Service Agent Description' datatype='string' name='[SERVICE_AGENT_DESCRIPTION]' role='dimension' type='nominal' />
+            <column caption='S Grp' datatype='string' name='[SGrp]' role='dimension' type='nominal' />
+            <column caption='Shipment Number' datatype='string' datatype-customized='true' name='[SHIPMENT_NUMBER]' role='dimension' type='nominal' />
+            <column caption='Shipment Type' datatype='string' name='[SHIPMENT_TYPE]' role='dimension' type='nominal' />
+            <column caption='Shipping Type' datatype='string' name='[SHIPPING_TYPE]' role='dimension' type='nominal' />
+            <column caption='S Loc' datatype='string' name='[SLoc]' role='dimension' type='nominal' />
+            <column caption='S Off' datatype='string' name='[SOff]' role='dimension' type='nominal' />
+            <column datatype='string' name='[SU]' role='dimension' type='nominal' />
+            <column caption='Sales Doc' datatype='string' name='[Sales_Doc]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Volume]' role='measure' type='quantitative' />
+            <column-instance column='[Created_On]' derivation='Month' name='[mn:Created_On:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[BILLING_DOCUMENT]' derivation='None' name='[none:BILLING_DOCUMENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Batch]' derivation='None' name='[none:Batch:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Bill_doc]' derivation='None' name='[none:Bill_doc:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CONTAINER_ID]' derivation='None' name='[none:CONTAINER_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CREATED_BY]' derivation='None' name='[none:CREATED_BY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CREATED_ON]' derivation='None' name='[none:CREATED_ON:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Created_By]' derivation='None' name='[none:Created_By:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created_On]' derivation='None' name='[none:Created_On:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[DELIVERY]' derivation='None' name='[none:DELIVERY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DELIVERY_DATE_FROM_TO]' derivation='None' name='[none:DELIVERY_DATE_FROM_TO:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LIQUIDATED]' derivation='None' name='[none:LIQUIDATED:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LIQUIDATION_REASON_CODE]' derivation='None' name='[none:LIQUIDATION_REASON_CODE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LIQ_DATE]' derivation='None' name='[none:LIQ_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Material]' derivation='None' name='[none:Material:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Matl_Group]' derivation='None' name='[none:Matl_Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PInt]' derivation='None' name='[none:PInt:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PURCHASING_DOCUMENT]' derivation='None' name='[none:PURCHASING_DOCUMENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Ref_Doc]' derivation='None' name='[none:Ref_Doc:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SERVICE_AGENT]' derivation='None' name='[none:SERVICE_AGENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SERVICE_AGENT_DESCRIPTION]' derivation='None' name='[none:SERVICE_AGENT_DESCRIPTION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SGrp]' derivation='None' name='[none:SGrp:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SHIPMENT_NUMBER]' derivation='None' name='[none:SHIPMENT_NUMBER:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SHIPMENT_TYPE]' derivation='None' name='[none:SHIPMENT_TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SHIPPING_TYPE]' derivation='None' name='[none:SHIPPING_TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SLoc]' derivation='None' name='[none:SLoc:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SOff]' derivation='None' name='[none:SOff:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SU]' derivation='None' name='[none:SU:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales_Doc]' derivation='None' name='[none:Sales_Doc:nk]' pivot='key' type='nominal' />
+            <column-instance column='[BillQty]' derivation='Sum' name='[sum:BillQty:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[BillQtySKU]' derivation='Sum' name='[sum:BillQtySKU:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Gross_Weight]' derivation='Sum' name='[sum:Gross_Weight:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Net_Weight]' derivation='Sum' name='[sum:Net_Weight:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Net_value]' derivation='Sum' name='[sum:Net_value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Gross_Weight:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Net_Weight:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Net_value:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Volume:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Gross_Weight:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Net_Weight:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Net_value:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:Volume:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk]'>
+            <groupfilter function='level-members' level='[none:BILLING_DOCUMENT:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Material:nk]' direction='DESC' measure-to-sort-by='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Created_By:nk]' shelf='rows' />
+          </single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]</column>
+            <column>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]</column>
+            <column>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Bill_doc:nk]</column>
+            <column>[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]</column>
+            <column>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]' value='105' />
+            <format attr='height' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SLoc:nk]' value='24' />
+            <format attr='border-width' scope='cols' value='2' />
+            <format attr='border-style' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SLoc:nk]' value='65' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]' value='84' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk]' value='100' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Material:nk]' value='128' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Description:nk]' value='252' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SERVICE_AGENT_DESCRIPTION:nk]' value='124' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:PURCHASING_DOCUMENT:nk]' value='116' />
+            <format attr='height' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]' value='39' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Created_On:ok]' value='128' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:DELIVERY:nk]' value='88' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:DELIVERY_DATE_FROM_TO:ok]' value='96' />
+            <format attr='width' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:LIQ_DATE:ok]' value='88' />
+            <format attr='border-width' scope='cols' value='2' />
+            <format attr='border-style' scope='cols' value='solid' />
+            <format attr='border-color' scope='cols' value='#000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='10' />
+            <format attr='text-orientation' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]' value='0' />
+            <format attr='text-align' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='2' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='stroke-size' scope='rows' value='2' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='div-level' scope='rows' value='16' />
+            <format attr='div-level' scope='cols' value='1' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]' value='Month Created'>
+              <formatted-text>
+                <run fontcolor='#e2e8f0'>Month Created</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]' value='Shipment Number'>
+              <formatted-text>
+                <run fontcolor='#e2e8f0'>Shipment Number</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk]' value='Billing Document'>
+              <formatted-text>
+                <run fontcolor='#e2e8f0'>Billing Document</run>
+              </formatted-text>
+            </format>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0tf3h3o10boamb1c88h5c04anfwn].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:DELIVERY:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_TYPE:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPPING_TYPE:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:CONTAINER_ID:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SERVICE_AGENT:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SERVICE_AGENT_DESCRIPTION:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:LIQUIDATION_REASON_CODE:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:LIQUIDATED:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:PURCHASING_DOCUMENT:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:LIQ_DATE:ok] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:DELIVERY_DATE_FROM_TO:ok] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:CREATED_ON:ok] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:CREATED_BY:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Ref_Doc:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:BillQty:ok] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SU:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[sum:BillQtySKU:ok] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Sales_Doc:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Material:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Description:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Batch:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Matl_Group:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:PInt:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SGrp:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SOff:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Created_By:nk] / ([federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Created_On:ok] / [federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SLoc:nk])))))))))))))))))))))))))))))</rows>
+        <cols>[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{759E1E24-5E34-49BE-B9F6-002F3172FC3A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='TBL_SHIPMENT_2025_ECC_DATA+ (SALES)' name='federated.0tf3h3o10boamb1c88h5c04anfwn' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0tf3h3o10boamb1c88h5c04anfwn'>
+        <column caption='Billing Document' datatype='string' name='[BILLING_DOCUMENT]' role='dimension' type='nominal' />
+        <column caption='Created Date' datatype='date' default-format='*mmmm dd, yyyy' name='[Created_On]' role='dimension' type='ordinal' />
+        <column caption='Shipment Number' datatype='string' datatype-customized='true' name='[SHIPMENT_NUMBER]' role='dimension' type='nominal' />
+        <column-instance column='[Created_On]' derivation='Month' name='[mn:Created_On:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[BILLING_DOCUMENT]' derivation='None' name='[none:BILLING_DOCUMENT:nk]' pivot='key' type='nominal' />
+        <column-instance column='[SHIPMENT_NUMBER]' derivation='None' name='[none:SHIPMENT_NUMBER:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='87554' id='7' param='horz' type-v2='layout-flow' w='98946' x='527' y='11461'>
+            <zone h='87554' id='5' type-v2='layout-basic' w='98946' x='527' y='11461'>
+              <zone h='87554' id='3' name='Sheet 1' show-title='false' w='98946' x='527' y='11461'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='dashed' />
+                  <format attr='border-width' value='2' />
+                  <format attr='margin' value='0' />
+                  <format attr='background-color' value='#dfedeb' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='5460' id='9' param='horz' type-v2='layout-flow' w='98946' x='527' y='6001'>
+            <zone fixed-size='226' h='5460' id='8' is-fixed='true' mode='dropdown' name='Sheet 1' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]' type-v2='filter' w='13692' x='527' y='6001'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='234' h='5460' id='12' is-fixed='true' mode='dropdown' name='Sheet 1' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]' type-v2='filter' values='relevant' w='14160' x='14219' y='6001'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='259' h='5460' id='13' is-fixed='true' mode='dropdown' name='Sheet 1' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk]' type-v2='filter' values='relevant' w='15623' x='28379' y='6001'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='5016' id='14' type-v2='text' w='98946' x='527' y='985'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='30'>SHIPMENT ECC 2025</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='dashed' />
+              <format attr='border-width' value='2' />
+              <format attr='margin' value='0' />
+              <format attr='background-color' value='#dfedeb' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='4' />
+            <format attr='margin' value='0' />
+            <format attr='padding' value='5' />
+            <format attr='background-color' value='#2c3e50' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='28' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98250' id='27' param='vert' type-v2='layout-flow' w='99064' x='468' y='875'>
+                <zone forceUpdate='true' h='5016' id='14' type-v2='text' w='98946' x='527' y='985'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='30'>SHIPMENT ECC 2025</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='dashed' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#dfedeb' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='226' h='5460' id='8' mode='dropdown' name='Sheet 1' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]' type-v2='filter' w='13692' x='527' y='6001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='234' h='5460' id='12' mode='dropdown' name='Sheet 1' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]' type-v2='filter' values='relevant' w='14160' x='14219' y='6001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='259' h='5460' id='13' mode='dropdown' name='Sheet 1' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:BILLING_DOCUMENT:nk]' type-v2='filter' values='relevant' w='15623' x='28379' y='6001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='87554' id='3' is-fixed='true' name='Sheet 1' show-title='false' w='98946' x='527' y='11461'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='dashed' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#dfedeb' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='4' />
+                <format attr='margin' value='0' />
+                <format attr='padding' value='5' />
+                <format attr='background-color' value='#2c3e50' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{FDD8929B-7251-46EC-9B4B-1A1180967710}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card mode='dropdown' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[mn:Created_On:ok]' type='filter' />
+            <card mode='dropdown' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:SHIPMENT_NUMBER:nk]' type='filter' values='relevant' />
+            <card mode='dropdown' param='[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Bill_doc:nk]' type='filter' values='relevant' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[:Measure Names]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:CREATED_ON:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Created_On:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:DELIVERY_DATE_FROM_TO:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:LIQ_DATE:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:PInt:nk]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[none:Volume:qk]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[yr:CREATED_ON:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[yr:Created_On:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[yr:DELIVERY_DATE_FROM_TO:ok]</field>
+            <field>[federated.0tf3h3o10boamb1c88h5c04anfwn].[yr:LIQ_DATE:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8014CFE6-26EC-4345-9046-C1E120F582CB}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1' />
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{9B65F2EB-F29E-4755-B294-5B681CC42509}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
